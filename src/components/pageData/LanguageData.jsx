@@ -1,7 +1,7 @@
-import userIcon from '../components/header/popUpMenu/popUpIcons/usericon.png';
-import balanceIcon from '../components/header/popUpMenu/popUpIcons/balance.png';
-import helpIcon from '../components/header/popUpMenu/popUpIcons/helpicon.png';
-import logOutIcon from '../components/header/popUpMenu/popUpIcons/logouticon.png';
+import userIcon from '../header/popUpMenu/popUpIcons/usericon.png';
+import balanceIcon from '../header/popUpMenu/popUpIcons/balance.png';
+import helpIcon from '../header/popUpMenu/popUpIcons/helpicon.png';
+import logOutIcon from '../header/popUpMenu/popUpIcons/logouticon.png';
 
 let languageData = {
   ru: {
@@ -50,6 +50,22 @@ let languageData = {
     contactPlace: 'г. Москва. ул, Ленина 54, офис 51',
     contactTime: 'Пн-Вс с 09:00 до 18:00',
     contactPhone: '8 800 555 35 35',
+    //----------------doctorUserPage--------------------//
+    doctorUserPageDoctors: 'Врачи',
+    doctorUserPageProffesion: 'Педиатр',
+    doctorUserPageProfile: 'Профиль',
+    doctorUserPagePrice: '900 / консультация',
+    doctorUserPageTime: '30 минут',
+    //----------------doctorUserPageProfileInfo--------------------//
+    doctorUserPageCalendarHeading: 'Ближайшая запись',
+    doctorUserPageCalendarText: 'Вторник 03 Марта',
+    doctorUserPageEducationHeading: 'Образование',
+    doctorUserPageEducationText_1: '1992 - Российский Государственный Университет',
+    doctorUserPageEducationText_2: '1994 - Ординатура по специальности «Педиатрия»',
+    doctorUserPageSpeacalizationHeading: 'Специализируется на лечении',
+    doctorUserPageSpeacalizationText: 'История о том, как мы должны сидеть сложа руки, о том, как мы относимся к элите, как мы относимся к временным происшествиям, труду и великой долоре. Мы должны стремиться к минимальному вознаграждению, потому что это не требует больших затрат труда и не требует дополнительных затрат, как следствие этого.',
+    doctorUserPageMoreHeading: 'Дополнительно',
+    doctorUserPageMoreText: 'История о том, как мы должны сидеть сложа руки, о том, как мы относимся к элите, как мы относимся к временным происшествиям, труду и великой долоре. Мы должны стремиться к минимальному вознаграждению, потому что это не требует больших затрат труда и не требует дополнительных затрат, как следствие этого.',
   },
   en: {
     link_1: 'How to use?',
@@ -97,6 +113,22 @@ let languageData = {
     contactPlace: 'Moscow. 54 Lenin Street, office 51',
     contactTime: 'Mon-Sun from 09:00 to 18:00',
     contactPhone: '8 800 555 35 35',
+    //----------------doctorUserPage--------------------//
+    doctorUserPageDoctors: 'Doctors',
+    doctorUserPageProffesion: 'Pediatrician',
+    doctorUserPageProfile: 'Profile',
+    doctorUserPagePrice: '900 / consultation',
+    doctorUserPageTime: '30 minutes',
+    //----------------doctorUserPageProfileInfo--------------------//
+    doctorUserPageCalendarHeading: 'The nearest entry',
+    doctorUserPageCalendarText: 'Tuesday 03 March',
+    doctorUserPageEducationHeading: 'Education',
+    doctorUserPageEducationText_1: '1992 - Russian State University',
+    doctorUserPageEducationText_2: '1994 - Residency in Pediatrics',
+    doctorUserPageSpeacalizationHeading: 'Hospitalized for treatment',
+    doctorUserPageSpeacalizationText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    doctorUserPageMoreHeading: 'Дополнительно',
+    doctorUserPageMoreText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
 };
 export default languageData;

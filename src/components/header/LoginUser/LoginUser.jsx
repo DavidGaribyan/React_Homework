@@ -41,7 +41,7 @@ export default function LoginUser(props) {
           <img className="popUp__icon" src={popUpIcon} alt="icon" />
         </button>
       </div>
-      {popUp ? <PopUpMenu /> : null}
+      <PopUpMenu popUp={popUp} />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NotesCard.css';
 
 export default function NotesCard({ user }) {
@@ -7,7 +8,7 @@ export default function NotesCard({ user }) {
         {user.map((item, index) => {
           return (
             <div className="notesCard__wrapper" key={index}>
-              <div className="notesCard__info">
+              <div className="notesCard__info" doctor={item.id}>
                 <div className="notesCard__date-info">
                   <img alt="icon" src={item.calendar} />
                   <p className="notesCard__date">{item.date} </p>
@@ -20,7 +21,9 @@ export default function NotesCard({ user }) {
               </div>
               <div className="notesCard__main">
                 <div className="notesCard__user-info">
-                  <img alt="avatar" src={item.avatar} />
+                  <Link to={`/doctor/${item.id}`} className="link_doctor">
+                    <img alt="avatar" src={item.avatar} className="avatar_img" doctor={item.id} />
+                  </Link>
                   <div className="user__info">
                     <p className="user__name">{item.doctorName}</p>
                     <p className="user__staff">{item.staff}</p>
