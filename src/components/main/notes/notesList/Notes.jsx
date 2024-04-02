@@ -2,7 +2,6 @@ import './notes.css';
 import NotesCard from '../notesCard/NotesCard.jsx';
 import { useContext, useState } from 'react';
 import languageContext from '../../../context/languageContext.jsx';
-import { Link } from 'react-router-dom';
 
 export default function Notes({ initial }) {
   const { userLanguage } = useContext(languageContext);
