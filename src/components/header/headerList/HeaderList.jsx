@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './headerList.css';
 
 export default function HeaderList({ initial }) {
@@ -5,9 +6,11 @@ export default function HeaderList({ initial }) {
   return (
     <>
       <ul className="nav">
-        <li className="nav__link">{languageContent.link_1}</li>
-        <li className="nav__link">{languageContent.link_2}</li>
-        <li className="nav__link">{languageContent.link_3}</li>
+        <Link className="nav__link">{languageContent.link_1}</Link>
+        <Link to="/myNotes" className="nav__link">
+          {languageContent.link_2}
+        </Link>
+        <Link className="nav__link">{languageContent.link_3}</Link>
       </ul>
     </>
   );

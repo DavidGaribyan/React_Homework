@@ -6,7 +6,9 @@ import languageData from './components/pageData/LanguageData.jsx';
 import { useState } from 'react';
 import userData from './components/pageData/userData.jsx';
 import DoctorProfile from './screens/doctorProfile/DoctorProfile.jsx';
+import Balance from './screens/balance/Balance.jsx';
 import { Route, Routes } from 'react-router-dom';
+import Notes from './components/main/notes/notesList/Notes.jsx';
 
 function App() {
   const [language, setLanguage] = useState(languageData.ru);
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/doctor/:id" element={<DoctorProfile />} />
+          <Route path="/balance" element={<Balance />} />
+          <Route path="/myNotes" element={<Notes initial={language} />} />
         </Routes>
         <FooterContent />
       </languageContext.Provider>

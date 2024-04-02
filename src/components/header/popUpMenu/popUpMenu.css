@@ -21,6 +21,10 @@
   transform: translate(-20px, 130px);
 }
 .popUp__item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-bottom: 8px;
   border-bottom: 1px solid black;
   padding-top: 11px;

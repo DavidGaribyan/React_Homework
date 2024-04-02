@@ -10,7 +10,6 @@ export default function Notes({ initial }) {
   let filter = userLanguage.filter((item) => item.conditionCheck === userCard);
   return (
     <>
-      {console.log(userLanguage)}
       <ul className="notes__list">
         <li onClick={() => setUserCard('1')} className={`notes__item  ${userCard === '1' ? 'active__yellow' : ''}`}>
           {languageContent.listItem_1}

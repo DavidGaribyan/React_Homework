@@ -2,6 +2,7 @@ import userIcon from '../header/popUpMenu/popUpIcons/usericon.png';
 import balanceIcon from '../header/popUpMenu/popUpIcons/balance.png';
 import helpIcon from '../header/popUpMenu/popUpIcons/helpicon.png';
 import logOutIcon from '../header/popUpMenu/popUpIcons/logouticon.png';
+import visaIcon from '../../screens/balance/balanceHistory/balanceIcons/visa.png';
 
 let languageData = {
   ru: {
@@ -66,6 +67,72 @@ let languageData = {
     doctorUserPageSpeacalizationText: 'История о том, как мы должны сидеть сложа руки, о том, как мы относимся к элите, как мы относимся к временным происшествиям, труду и великой долоре. Мы должны стремиться к минимальному вознаграждению, потому что это не требует больших затрат труда и не требует дополнительных затрат, как следствие этого.',
     doctorUserPageMoreHeading: 'Дополнительно',
     doctorUserPageMoreText: 'История о том, как мы должны сидеть сложа руки, о том, как мы относимся к элите, как мы относимся к временным происшествиям, труду и великой долоре. Мы должны стремиться к минимальному вознаграждению, потому что это не требует больших затрат труда и не требует дополнительных затрат, как следствие этого.',
+    //----------------balance----------------//
+    balanceHeading: 'Баланс',
+    balanceAmount: '1 058,68',
+    balanceBtn: 'Пополнить счет',
+    balanceHistoryListHeading: 'История платежей',
+    balanceListItem_1: 'За сегодня',
+    balanceListItem_2: 'За месяц',
+    balanceListItem_3: 'За все время',
+    balanceData: [
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Пополнение',
+        balanceTransactionCount: '+ 560,00',
+      },
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Оплата за консультацию',
+        balanceTransactionCount: '- 360,00',
+      },
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Оплата за консультацию',
+        balanceTransactionCount: '- 900,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Пополнение',
+        balanceTransactionCount: '+ 400,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Пополнение',
+        balanceTransactionCount: '+ 900,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Оплата за консультацию',
+        balanceTransactionCount: '- 900,00',
+      },
+      {
+        balancePeriud: '3',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Оплата за консультацию',
+        balanceTransactionCount: '- 450,00',
+      },
+      {
+        balancePeriud: '3',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Оплата за консультацию',
+        balanceTransactionCount: '+ 700,00',
+      },
+    ],
   },
   en: {
     link_1: 'How to use?',
@@ -129,6 +196,73 @@ let languageData = {
     doctorUserPageSpeacalizationText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     doctorUserPageMoreHeading: 'Дополнительно',
     doctorUserPageMoreText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
+    //----------------balance----------------//
+    balanceHeading: 'Balance',
+    balanceAmount: '1 058,68',
+    balanceBtn: 'Make deposit',
+    balanceHistoryListHeading: 'Payment history',
+    balanceListItem_1: 'For today',
+    balanceListItem_2: 'For month',
+    balanceListItem_3: 'For all time',
+    balanceData: [
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Deposit',
+        balanceTransactionCount: '+ 560,00',
+      },
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Payment for consultation',
+        balanceTransactionCount: '- 360,00',
+      },
+      {
+        balancePeriud: '1',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Payment for consultation',
+        balanceTransactionCount: '- 900,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Deposit',
+        balanceTransactionCount: '+ 400,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Deposit',
+        balanceTransactionCount: '+ 900,00',
+      },
+      {
+        balancePeriud: '2',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Payment for consultation',
+        balanceTransactionCount: '- 900,00',
+      },
+      {
+        balancePeriud: '3',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Payment for consultation',
+        balanceTransactionCount: '- 450,00',
+      },
+      {
+        balancePeriud: '3',
+        balanceTransactionIcon: visaIcon,
+        balanceTransactionDate: '10.03.2021',
+        balanceTransactionCondition: 'Payment for consultation',
+        balanceTransactionCount: '+ 700,00',
+      },
+    ],
   },
 };
 export default languageData;

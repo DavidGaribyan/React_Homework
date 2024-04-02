@@ -1,4 +1,4 @@
 import './wrapperShadow.css';
-export default function WrapperShadow(props) {
-  return <div className="shadow">{props.children}</div>;
+export default function WrapperShadow({ children }) {
+  return <div className="shadow">{children}</div>;
 }

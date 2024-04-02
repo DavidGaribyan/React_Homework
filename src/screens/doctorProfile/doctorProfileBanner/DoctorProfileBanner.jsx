@@ -1,4 +1,4 @@
-import Wrapper from '../../../components/header/headerWrapper/Wrapper';
+import WrapperMain from '../../../components/wrapperMain/WrapperMain';
 import bannerArrow from './bannerArrow.png';
 import './doctorProfileBanner.css';
 
@@ -8,7 +8,7 @@ export default function DoctorProfileBanner({ initial }) {
   return (
     <>
       <div className="doctorProfile__wrapper">
-        <Wrapper>
+        <WrapperMain>
           <div className="doctorBanner__info-wrapper">
             <div className="banner__links">
               <p>{doctorPageData.doctorUserPageDoctors}</p>
@@ -30,7 +30,7 @@ export default function DoctorProfileBanner({ initial }) {
             <p className="profile__banner-price">{doctorPageData.doctorUserPagePrice}</p>
             <p>{doctorPageData.doctorUserPageTime}</p>
           </div>
-        </Wrapper>
+        </WrapperMain>
       </div>
     </>
   );

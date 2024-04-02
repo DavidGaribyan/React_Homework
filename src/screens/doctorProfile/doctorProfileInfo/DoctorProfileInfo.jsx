@@ -1,4 +1,4 @@
-import Wrapper from '../../../components/header/headerWrapper/Wrapper';
+import WrapperMain from '../../../components/wrapperMain/WrapperMain';
 import infoPageCalendar from './doctorProfileInfoIcons/infoPage-calendar.png';
 import infoPageEducation from './doctorProfileInfoIcons/infoPage-education.png';
 import infoPageMore from './doctorProfileInfoIcons/infoPage-more.png';
@@ -9,7 +9,7 @@ export default function DoctorProfileInfo({ initial }) {
   let doctorUserPageData = initial;
   return (
     <>
-      <Wrapper>
+      <WrapperMain>
         <div className="doctorProfileInfo__wrapper">
           <ul className="doctorProfileInfo__list">
             <li>
@@ -43,7 +43,7 @@ export default function DoctorProfileInfo({ initial }) {
             </li>
           </ul>
         </div>
-      </Wrapper>
+      </WrapperMain>
     </>
   );
 }

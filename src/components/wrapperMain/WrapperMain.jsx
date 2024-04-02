@@ -1,4 +1,4 @@
 import './wrapperMain.css';
-export default function WrapperMain(props) {
-  return <div className="wrapper__main">{props.children}</div>;
+export default function WrapperMain({ children }) {
+  return <div className="wrapper__main">{children}</div>;
 }
