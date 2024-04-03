@@ -1,4 +1,4 @@
-import './lis.css';
+import './list.css';
 export default function List({ initial }) {
   let languageContent = initial;
   return (

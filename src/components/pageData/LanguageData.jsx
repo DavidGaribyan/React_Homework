@@ -3,6 +3,20 @@ import balanceIcon from '../header/popUpMenu/popUpIcons/balance.png';
 import helpIcon from '../header/popUpMenu/popUpIcons/helpicon.png';
 import logOutIcon from '../header/popUpMenu/popUpIcons/logouticon.png';
 import visaIcon from '../../screens/balance/balanceHistory/balanceIcons/visa.png';
+const currentDate = new Date();
+const day = currentDate.getDate();
+const month = currentDate.getMonth() + 1;
+const year = currentDate.getFullYear();
+let formattedDate;
+if (month < 10 && day < 10) {
+  formattedDate = `0${day}.0${month}.${year}`;
+} else if (day < 10) {
+  formattedDate = `0${day}.${month}.${year}`;
+} else if (month < 10) {
+  formattedDate = `${day}.0${month}.${year}`;
+} else {
+  formattedDate = `${day}.${month}.${year}`;
+}
 
 let languageData = {
   ru: {
@@ -79,60 +93,64 @@ let languageData = {
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Пополнение',
         balanceTransactionCount: '+ 560,00',
       },
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Оплата за консультацию',
         balanceTransactionCount: '- 360,00',
       },
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Оплата за консультацию',
         balanceTransactionCount: '- 900,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Пополнение',
         balanceTransactionCount: '+ 400,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Пополнение',
         balanceTransactionCount: '+ 900,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Оплата за консультацию',
         balanceTransactionCount: '- 900,00',
       },
       {
         balancePeriud: '3',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2023',
         balanceTransactionCondition: 'Оплата за консультацию',
         balanceTransactionCount: '- 450,00',
       },
       {
         balancePeriud: '3',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2023',
         balanceTransactionCondition: 'Оплата за консультацию',
         balanceTransactionCount: '+ 700,00',
       },
     ],
+    //----------page not found-----------//
+    pageNotFoundText_1: 'Страница, которую вы ищете, не найдена!',
+    pageNotFoundText_2: 'Воспользуйтесь ссылкой ниже, чтобы перейти на домашнюю страницу.',
+    pageNotFoundBtn: 'перейти на домашнюю страницу',
   },
   en: {
     link_1: 'How to use?',
@@ -209,60 +227,64 @@ let languageData = {
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Deposit',
         balanceTransactionCount: '+ 560,00',
       },
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Payment for consultation',
         balanceTransactionCount: '- 360,00',
       },
       {
         balancePeriud: '1',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: formattedDate,
         balanceTransactionCondition: 'Payment for consultation',
         balanceTransactionCount: '- 900,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Deposit',
         balanceTransactionCount: '+ 400,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Deposit',
         balanceTransactionCount: '+ 900,00',
       },
       {
         balancePeriud: '2',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2024',
         balanceTransactionCondition: 'Payment for consultation',
         balanceTransactionCount: '- 900,00',
       },
       {
         balancePeriud: '3',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2023',
         balanceTransactionCondition: 'Payment for consultation',
         balanceTransactionCount: '- 450,00',
       },
       {
         balancePeriud: '3',
         balanceTransactionIcon: visaIcon,
-        balanceTransactionDate: '10.03.2021',
+        balanceTransactionDate: '10.03.2023',
         balanceTransactionCondition: 'Payment for consultation',
         balanceTransactionCount: '+ 700,00',
       },
     ],
+    //----------page not found-----------//
+    pageNotFoundText_1: 'The page you are looking for has not been found!',
+    pageNotFoundText_2: 'Use link below to get home page.',
+    pageNotFoundBtn: 'Go Home',
   },
 };
 export default languageData;

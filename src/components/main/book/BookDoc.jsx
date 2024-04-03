@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bookDocImg from './bookDocimg.png';
 import './bookDoctor.css';
 export default function BookDoctor({ initial }) {
@@ -17,7 +18,9 @@ export default function BookDoctor({ initial }) {
           <button className="book__btn">{languageContent.bookBtn}</button>
         </div>
       </div>
-      <button className="myBooks__btn">{languageContent.myBooks}</button>
+      <Link to="/myNotes" className="myBooks__btn">
+        {languageContent.myBooks}
+      </Link>
     </>
   );
 }

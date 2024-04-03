@@ -52,17 +52,19 @@
   color: #56ccf2;
   font-size: 20px;
   font-weight: 700;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
 }
 .myBooks__btn {
-  padding: 4px 18px;
-  background-color: #9de7ff;
   display: block;
-  margin: 0 auto 61px auto;
+  text-decoration: none;
+  max-width: fit-content;
+  padding: 4px 18px;
+  margin: 0 auto 60px;
+  margin-bottom: 60px;
+  background-color: #9de7ff;
   border-radius: 5px;
-  border: none;
   color: #4f4f4f;
   font-size: 18px;
   font-weight: 400;
-  font-family: Montserrat;
+  font-family: 'montserrat';
 }

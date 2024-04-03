@@ -9,6 +9,7 @@ import DoctorProfile from './screens/doctorProfile/DoctorProfile.jsx';
 import Balance from './screens/balance/Balance.jsx';
 import { Route, Routes } from 'react-router-dom';
 import Notes from './components/main/notes/notesList/Notes.jsx';
+import PageNotFound from './screens/404pageNotFound/PageNotFound.jsx';
 
 function App() {
   const [language, setLanguage] = useState(languageData.ru);
@@ -26,7 +27,8 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/doctor/:id" element={<DoctorProfile />} />
           <Route path="/balance" element={<Balance />} />
-          <Route path="/myNotes" element={<Notes initial={language} />} />
+          <Route path="/myNotes" element={<Notes initial={language} show={true} />} />
+          <Route path="/*" element={<PageNotFound initial={language} />} />
         </Routes>
         <FooterContent />
       </languageContext.Provider>

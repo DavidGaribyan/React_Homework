@@ -3,6 +3,13 @@
   list-style: none;
   gap: 50px;
 }
+.notes__heading {
+  color: #4f4f4f;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Montserrat';
+  margin-bottom: 25px;
+}
 .active__yellow {
   background-color: #ffab43;
 }
@@ -19,7 +26,7 @@
   border-radius: 2px;
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 110px;
+  margin-bottom: 50px;
   transition: all 0.3s;
   cursor: pointer;
   border-radius: 8px;

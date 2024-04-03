@@ -6,11 +6,15 @@ export default function HeaderList({ initial }) {
   return (
     <>
       <ul className="nav">
-        <Link className="nav__link">{languageContent.link_1}</Link>
+        <Link to="/howToUse" className="nav__link">
+          {languageContent.link_1}
+        </Link>
         <Link to="/myNotes" className="nav__link">
           {languageContent.link_2}
         </Link>
-        <Link className="nav__link">{languageContent.link_3}</Link>
+        <Link to="/bookDoctor" className="nav__link">
+          {languageContent.link_3}
+        </Link>
       </ul>
     </>
   );

@@ -9,6 +9,7 @@
   cursor: pointer;
   background: none;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .white:hover {
   background: #56ccf2;
@@ -25,6 +26,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .blue:hover {
   border: 2px solid #56ccf2;
