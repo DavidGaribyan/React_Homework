@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './headerList.css';
 
 export default function HeaderList({ initial }) {
-  let languageContent = initial;
+  const languageContent = initial;
   return (
     <>
       <ul className="nav">

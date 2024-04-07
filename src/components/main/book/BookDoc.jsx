@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import bookDocImg from './bookDocimg.png';
 import './bookDoctor.css';
 export default function BookDoctor({ initial }) {
-  let languageContent = initial;
+  const languageContent = initial;
   return (
     <>
       <div className="book__wrapper">

@@ -2,15 +2,25 @@ import BalanceHistory from './balanceHistory/BalanceHistory';
 import WrapperMain from '../../components/wrapperMain/WrapperMain';
 import Button from '../../components/main/consultations/button/InfoBtn';
 import './balance.css';
-import { useContext, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import languageContext from '../../components/context/languageContext';
 
 export default function Balance() {
   const { language } = useContext(languageContext);
-  const filteredDay = language.balanceData.filter((item) => item.balancePeriud === '1');
-  const filteredMonth = language.balanceData.filter((item) => item.balancePeriud === '1' || item.balancePeriud === '2');
-  const filteredAll = language.balanceData.filter((item) => item.balancePeriud === '1' || item.balancePeriud === '2' || item.balancePeriud === '3');
-  const [balancePeriud, setBalancePeriud] = useState(filteredDay);
+  const [balancePeriud, setBalancePeriud] = useState('1');
+
+  const filteredData = useMemo(() => {
+    switch (balancePeriud) {
+      case '1':
+        return language.balanceData.filter((item) => item.balancePeriud === '1');
+      case '2':
+        return language.balanceData.filter((item) => item.balancePeriud === '1' || item.balancePeriud === '2');
+      case '3':
+        return language.balanceData.filter((item) => item.balancePeriud === '1' || item.balancePeriud === '2' || item.balancePeriud === '3');
+      default:
+        return [];
+    }
+  }, [balancePeriud, language.balanceData]);
 
   return (
     <>
@@ -26,18 +36,18 @@ export default function Balance() {
         <p className="balanceHistory__heading">{language.balanceHistoryListHeading}</p>
 
         <ul className="balanceNotes__list">
-          <li onClick={() => setBalancePeriud(filteredDay)} className={`balanceNotes__item  ${balancePeriud === '1' ? 'balanceNotes__item-active' : ''}`}>
+          <li onClick={() => setBalancePeriud('1')} className={`balanceNotes__item  ${balancePeriud === '1' ? 'balanceNotes__item-active' : ''}`}>
             {language.balanceListItem_1}
           </li>
-          <li onClick={() => setBalancePeriud(filteredMonth)} className={`balanceNotes__item  ${balancePeriud === '2' ? 'balanceNotes__item-active' : ''}`}>
+          <li onClick={() => setBalancePeriud('2')} className={`balanceNotes__item  ${balancePeriud === '2' ? 'balanceNotes__item-active' : ''}`}>
             {language.balanceListItem_2}
           </li>
-          <li onClick={() => setBalancePeriud(filteredAll)} className={`balanceNotes__item  ${balancePeriud === '3' ? 'balanceNotes__item-active' : ''}`}>
+          <li onClick={() => setBalancePeriud('3')} className={`balanceNotes__item  ${balancePeriud === '3' ? 'balanceNotes__item-active' : ''}`}>
             {language.balanceListItem_3}
           </li>
         </ul>
 
-        <BalanceHistory initial={balancePeriud} />
+        <BalanceHistory initial={filteredData} />
       </WrapperMain>
     </>
   );

@@ -4,7 +4,7 @@ import clock from './contactIcons/clock.png';
 import phone from './contactIcons/phone.png';
 import './contact.css';
 export default function Contacts({ initial }) {
-  let languageContent = initial;
+  const languageContent = initial;
   return (
     <>
       <div className="contacts__wrapper">

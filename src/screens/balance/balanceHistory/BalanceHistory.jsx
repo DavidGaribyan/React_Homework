@@ -1,6 +1,6 @@
 import './balanceHistory.css';
 export default function BalanceHistory({ initial }) {
-  let transaction = initial;
+  const transaction = initial;
 
   return transaction.map((item, index) => (
     <div className="balanceHistory__item" key={index}>

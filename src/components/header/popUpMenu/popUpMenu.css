@@ -3,9 +3,9 @@
   font-size: 14px;
   font-weight: 400;
   position: absolute;
-  transform: translate(-20px, -300px);
+  transform: translate(0px, -300px);
   opacity: 0;
-  right: 20%;
+  right: 0;
   list-style: none;
   max-height: 200px;
   max-width: 350px;
@@ -18,7 +18,7 @@
 }
 .popUp__list.visible {
   opacity: 1;
-  transform: translate(-20px, 130px);
+  transform: translate(0px, 130px);
 }
 .popUp__item {
   text-decoration: none;

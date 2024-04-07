@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import './NotesCard.css';
 
 export default function NotesCard({ user }) {
+  const scroll = () => {
+    window.scroll({ top: 0 });
+  };
   return (
     <>
       <div className="notes__wrap">
@@ -21,7 +24,7 @@ export default function NotesCard({ user }) {
               </div>
               <div className="notesCard__main">
                 <div className="notesCard__user-info">
-                  <Link to={`/doctor/${item.id}`} className="link_doctor">
+                  <Link to={`/doctor/${item.id}`} className="link_doctor" onClick={scroll}>
                     <img alt="avatar" src={item.avatar} className="avatar_img" doctor={item.id} />
                   </Link>
                   <div className="user__info">

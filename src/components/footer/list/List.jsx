@@ -1,6 +1,6 @@
 import './list.css';
 export default function List({ initial }) {
-  let languageContent = initial;
+  const languageContent = initial;
   return (
     <>
       <ul className="footer__list">

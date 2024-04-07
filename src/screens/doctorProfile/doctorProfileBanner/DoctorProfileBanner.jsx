@@ -3,8 +3,8 @@ import bannerArrow from './bannerArrow.png';
 import './doctorProfileBanner.css';
 
 export default function DoctorProfileBanner({ initial }) {
-  let doctorUserData = initial.doctorUserPage;
-  let doctorPageData = initial.language;
+  const doctorUserData = initial.doctorUserPage;
+  const doctorPageData = initial.language;
   return (
     <>
       <div className="doctorProfile__wrapper">

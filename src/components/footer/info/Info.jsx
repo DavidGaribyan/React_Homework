@@ -2,7 +2,7 @@ import Logo from '../../header/Logo/logoFooter.png';
 import Social from './social/Social';
 import './info.css';
 export default function Info({ initial }) {
-  let languageContent = initial;
+  const languageContent = initial;
   return (
     <>
       <div className="footer__info-wrapper">

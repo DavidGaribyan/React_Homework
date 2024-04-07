@@ -6,7 +6,7 @@ import infoPagePlus from './doctorProfileInfoIcons/infoPage-plus.png';
 
 import './doctorProfileInfo.css';
 export default function DoctorProfileInfo({ initial }) {
-  let doctorUserPageData = initial;
+  const doctorUserPageData = initial;
   return (
     <>
       <WrapperMain>
