@@ -1,34 +1,35 @@
 import WrapperMain from '../../../components/wrapperMain/WrapperMain';
 import bannerArrow from './bannerArrow.png';
 import './doctorProfileBanner.css';
+import { useTranslation } from 'react-i18next';
 
 export default function DoctorProfileBanner({ initial }) {
-  const doctorUserData = initial.doctorUserPage;
-  const doctorPageData = initial.language;
+  const { t } = useTranslation();
+  const doctorUserData = initial;
   return (
     <>
       <div className="doctorProfile__wrapper">
         <WrapperMain>
           <div className="doctorBanner__info-wrapper">
             <div className="banner__links">
-              <p>{doctorPageData.doctorUserPageDoctors}</p>
+              <p>{t('doctorUserPage.doctorUserPageDoctors')}</p>
               <img src={bannerArrow} alt="arrow" />
-              <p>{doctorPageData.doctorUserPageProffesion}</p>
+              <p>{t('doctorUserPage.doctorUserPageProffesion')}</p>
               <img src={bannerArrow} alt="arrow" />
-              <p>{doctorPageData.doctorUserPageProfile}</p>
+              <p>{t('doctorUserPage.doctorUserPageProfile')}</p>
             </div>
             <div className="profile__banner-info">
-              <img src={doctorUserData.avatar} alt="icon" className="banner__avatar" />
+              <img src={`../${doctorUserData.avatar}`} alt="avatar" className="banner__avatar" />
               <div className="profile__banner-info-text">
                 <p className="doctorBanner__info-doctorName">{doctorUserData.doctorName}</p>
                 <p className="doctorBanner__info-doctorStaff">{doctorUserData.staff}</p>
                 <p className="doctorBanner__info-doctorStage">{doctorUserData.stage}</p>
               </div>
+              <div className="profile__banner-price-info">
+                <p className="profile__banner-price">{t('doctorUserPage.doctorUserPagePrice')}</p>
+                <p>{t('doctorUserPage.doctorUserPageTime')}</p>
+              </div>
             </div>
-          </div>
-          <div className="profile__banner-price-info">
-            <p className="profile__banner-price">{doctorPageData.doctorUserPagePrice}</p>
-            <p>{doctorPageData.doctorUserPageTime}</p>
           </div>
         </WrapperMain>
       </div>

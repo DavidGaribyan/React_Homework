@@ -2,18 +2,18 @@ import DoctorProfileBanner from './doctorProfileBanner/DoctorProfileBanner';
 import DoctorProfileInfo from './doctorProfileInfo/DoctorProfileInfo';
 import './doctorProfile.css';
 import { useParams } from 'react-router-dom';
-import { useContext, useMemo } from 'react';
-import languageContext from '../../components/context/languageContext';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function DoctorProfile() {
-  const { language, userLanguage } = useContext(languageContext);
+  const { t } = useTranslation();
+  const userPageData = t('doctorUserPage.doctorsCards', { returnObjects: true });
   const doctorId = useParams();
-  const doctorUserPage = useMemo(() => userLanguage.find((item) => item.id === doctorId.id), [userLanguage, doctorId.id]);
-
+  const doctorUserPage = useMemo(() => userPageData.find((item) => item.id === doctorId.id), [userPageData, doctorId.id]);
   return (
     <>
-      <DoctorProfileBanner initial={{ doctorUserPage, language }} />
-      <DoctorProfileInfo initial={language} />
+      <DoctorProfileBanner initial={doctorUserPage} />
+      <DoctorProfileInfo />
     </>
   );
 }

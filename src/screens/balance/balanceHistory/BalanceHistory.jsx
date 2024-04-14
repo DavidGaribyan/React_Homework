@@ -1,4 +1,5 @@
 import './balanceHistory.css';
+
 export default function BalanceHistory({ initial }) {
   const transaction = initial;
 

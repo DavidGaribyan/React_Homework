@@ -5,20 +5,19 @@ import Logo from './Logo/LogoMain.jsx';
 import HeaderList from './headerList/HeaderList.jsx';
 import Notification from './Notification/Notification.jsx';
 import LoginUser from './LoginUser/LoginUser.jsx';
-import { useContext } from 'react';
-import languageContext from '../context/languageContext.jsx';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const { language } = useContext(languageContext);
+  const { t } = useTranslation();
   return (
     <>
       <WrapperShadow>
         <Wrapper>
           <Logo />
           <div className="header__wrap">
-            <HeaderList initial={language} />
+            <HeaderList />
             <Notification notCount="3" />
-            <LoginUser userName={language.name} userLetter={language.name.charAt(0)} />
+            <LoginUser userName={t('name')} userLetter={t('name').charAt(0)} />
           </div>
         </Wrapper>
       </WrapperShadow>

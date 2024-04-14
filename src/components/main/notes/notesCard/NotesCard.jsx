@@ -5,6 +5,7 @@ export default function NotesCard({ user }) {
   const scroll = () => {
     window.scroll({ top: 0 });
   };
+
   return (
     <>
       <div className="notes__wrap">

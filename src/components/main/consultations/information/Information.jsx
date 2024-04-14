@@ -1,18 +1,20 @@
 import './information.css';
 import Button from '../button/InfoBtn.jsx';
-export default function Information({ initial }) {
-  let language = initial;
+import { useTranslation } from 'react-i18next';
+
+export default function Information() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="info__wrapper">
         <h1 className="information__heading">
-          <span className="heading__decoration">{language.headingDecoration}</span> {language.headingText}
+          <span className="heading__decoration">{t('mainInfo.headingDecoration')}</span> {t('mainInfo.headingText')}
         </h1>
         <p className="information__text">
-          {language.informationText} <span className="infoText__decor">{language.infoTextDecor}</span> {language.separateText} <span className="infoText__decor">{language.infoTextDecor_2}</span> {language.informationText_2} <span className="stores__decor">{language.store_1}</span> {language.and} <span className="stores__decor">{language.store_2}</span>
+          {t('mainInfo.hinformationText')} <span className="infoText__decor">{t('mainInfo.infoTextDecor')}</span> {t('mainInfo.separateText')} <span className="infoText__decor">{t('mainInfo.infoTextDecor_2')}</span> {t('mainInfo.informationText_2')} <span className="stores__decor">{t('mainInfo.store_1')}</span> {t('mainInfo.and')} <span className="stores__decor">{t('mainInfo.store_2')}</span>
         </p>
-        <Button className="white" btnName={language.btn_book} />
-        <Button className="blue" btnName={language.btn_how} />
+        <Button className="white" btnName={t('mainInfo.btn_book')} />
+        <Button className="blue" btnName={t('mainInfo.btn_how')} />
       </div>
     </>
   );
