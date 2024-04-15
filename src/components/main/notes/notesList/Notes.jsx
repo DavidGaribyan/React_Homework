@@ -11,6 +11,7 @@ export default function Notes({ show }) {
   const filteredUserLanguage = useMemo(() => {
     return users.filter((item) => item.conditionCheck === userCard);
   }, [users, userCard]);
+
   return (
     <>
       <WrapperMain>

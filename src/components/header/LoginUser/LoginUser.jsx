@@ -11,7 +11,6 @@ export default function LoginUser(props) {
   function togglePopUp() {
     setPopUp(!popUp);
   }
-
   const [langBgEn, setLangBgEn] = useState('');
   const [langBgRu, setLangBgRu] = useState('active');
 

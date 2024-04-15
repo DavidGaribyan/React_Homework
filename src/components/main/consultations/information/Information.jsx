@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Information() {
   const { t } = useTranslation();
+
   return (
     <>
       <div className="info__wrapper">
