@@ -13,6 +13,7 @@
   font-family: Montserrat;
 }
 .doctorProfileInfo__list-text {
+  line-height: 20px;
   margin-bottom: 20px;
 }
 .doctorProfileInfo__list-heading {

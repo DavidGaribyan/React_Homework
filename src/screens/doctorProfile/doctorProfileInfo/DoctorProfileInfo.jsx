@@ -7,8 +7,14 @@ import infoPageMore from './doctorProfileInfoIcons/infoPage-more.png';
 import infoPagePlus from './doctorProfileInfoIcons/infoPage-plus.png';
 import { useTranslation } from 'react-i18next';
 
-export default function DoctorProfileInfo() {
+export default function DoctorProfileInfo({ initial }) {
+  const doctorUserData = initial;
   const { t } = useTranslation();
+
+  const setToHtml = (text) => {
+    return { __html: text };
+  };
+
   return (
     <>
       <WrapperMain>
@@ -19,29 +25,31 @@ export default function DoctorProfileInfo() {
                 <img src={infoPageCalendar} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageCalendarHeading')}
               </p>
-              <p>{t('doctorUserPage.doctorUserPageCalendarText')}</p>
+              <p>{doctorUserData.near_date}</p>
             </li>
             <li>
               <p className="doctorProfileInfo__list-heading">
                 <img src={infoPageEducation} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageEducationHeading')}
               </p>
-              <p className="doctorProfileInfo__list-text">{t('doctorUserPage.doctorUserPageEducationText_1')}</p>
-              <p>{t('doctorUserPage.doctorUserPageEducationText_2')}</p>
+              <p className="doctorProfileInfo__list-text" dangerouslySetInnerHTML={setToHtml(doctorUserData.doctor_details.education)}></p>
             </li>
             <li>
               <p className="doctorProfileInfo__list-heading">
                 <img src={infoPagePlus} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageSpeacalizationHeading')}
               </p>
-              <p>{t('doctorUserPage.doctorUserPageSpeacalizationText')} </p>
+              <p>{doctorUserData.user_categories[0].category.description.ru} </p>
             </li>
             <li>
               <p className="doctorProfileInfo__list-heading">
                 <img src={infoPageMore} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageMoreHeading')}
               </p>
-              <p>{t('doctorUserPage.doctorUserPageMoreText')} </p>
+              <p className="doctorProfileInfo__list-text">city: {doctorUserData.city} </p>
+              <p className="doctorProfileInfo__list-text">adress: {doctorUserData.address} </p>
+              <p className="doctorProfileInfo__list-text">date of birth: {doctorUserData.date_of_birth} </p>
+              <p className="doctorProfileInfo__list-text">phone number: {doctorUserData.phone_number} </p>
             </li>
           </ul>
         </div>
