@@ -32,14 +32,14 @@ export default function DoctorProfileInfo({ initial }) {
                 <img src={infoPageEducation} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageEducationHeading')}
               </p>
-              <p className="doctorProfileInfo__list-text" dangerouslySetInnerHTML={setToHtml(doctorUserData.doctor_details.education)}></p>
+              {/* <p className="doctorProfileInfo__list-text" dangerouslySetInnerHTML={setToHtml(doctorUserData.doctor_details.education)}></p> */}
             </li>
             <li>
               <p className="doctorProfileInfo__list-heading">
                 <img src={infoPagePlus} alt="icon" className="infoPage__calendar" />
                 {t('doctorUserPage.doctorUserPageSpeacalizationHeading')}
               </p>
-              <p>{doctorUserData.user_categories[0].category.description.ru} </p>
+              {/* <p>{doctorUserData.user_categories[0].category.description.ru} </p> */}
             </li>
             <li>
               <p className="doctorProfileInfo__list-heading">

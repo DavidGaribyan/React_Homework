@@ -1,3 +1,0 @@
-const SET_USER = 'SET_USER';
-const SET_SECOND_USER = 'SET_SECOND_USER';
-export { SET_USER, SET_SECOND_USER };

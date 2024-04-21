@@ -3,26 +3,31 @@ import DoctorProfileInfo from './doctorProfileInfo/DoctorProfileInfo';
 import './doctorProfile.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import { doctorInfo } from '../../store/actions/userActions';
+import { doctorInfoPageSelector } from '../../store/selectors';
 
 export default function DoctorProfile() {
   const dispatch = useDispatch();
-  const doctorId = useParams();
-  const userDoctor = useSelector((state) => state.secondUserInfo.payload);
+  const { id } = useParams();
+  const doctorInfoPageUser = useSelector(doctorInfoPageSelector);
 
   useEffect(() => {
-    axios
-      .get(`https://api.allodoc.md/users/user/${doctorId.id}/?role=doctor`)
-      .then((resp) => {
-        dispatch({ type: 'SET_SECOND_USER', payload: resp.data });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [doctorId, dispatch]);
+    dispatch(doctorInfo({ id: id }));
+  }, [dispatch, id]);
 
-  if (!userDoctor) {
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://api.allodoc.md/users/user/${id}/?role=doctor`)
+  //     .then((resp) => {
+  //       dispatch(doctorInfoPage(resp.data.results));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, [id, dispatch]);
+
+  if (!doctorInfoPageUser) {
     return (
       <>
         <p>Loading...</p>
@@ -31,8 +36,8 @@ export default function DoctorProfile() {
   } else {
     return (
       <>
-        <DoctorProfileBanner initial={userDoctor} />
-        <DoctorProfileInfo initial={userDoctor} />
+        <DoctorProfileBanner initial={doctorInfoPageUser} />
+        <DoctorProfileInfo initial={doctorInfoPageUser} />
       </>
     );
   }

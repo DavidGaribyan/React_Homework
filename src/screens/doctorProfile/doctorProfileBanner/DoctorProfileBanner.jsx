@@ -29,8 +29,8 @@ export default function DoctorProfileBanner({ initial }) {
                 <p className="doctorBanner__info-doctorStage">{doctorUserData.phone_number}</p>
               </div>
               <div className="profile__banner-price-info">
-                <p className="profile__banner-price">{doctorUserData.doctor_details.price} $/ консультация</p>
-                <p>{doctorUserData.doctor_details.consultation_duration} минут</p>
+                {/* <p className="profile__banner-price">{doctorUserData.doctor_details.price} $/ консультация</p> */}
+                {/* <p>{doctorUserData.doctor_details.consultation_duration} минут</p> */}
               </div>
             </div>
           </div>
