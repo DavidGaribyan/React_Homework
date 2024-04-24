@@ -1,30 +1,30 @@
-import { doctorInfoPageTypes } from '../types';
-
-const data = {
-  data: null,
+import { doctorListTypes } from '../types';
+const initData = {
+  doctorList: [],
   error: null,
   loading: true,
 };
 
-export default function doctorInfoPage(state = data, action) {
+export default function doctorList(state = initData, action) {
   const { type, payload } = action;
+
   switch (type) {
-    case doctorInfoPageTypes.REQUEST:
+    case doctorListTypes.REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case doctorInfoPageTypes.SUCCESS:
+    case doctorListTypes.SUCCESS:
       return {
         ...state,
-        data: payload,
+        doctorList: payload,
         error: null,
         loading: false,
       };
-    case doctorInfoPageTypes.REJECT:
+    case doctorListTypes.REJECT:
       return {
         ...state,
-        data: null,
+        doctorList: [],
         error: payload,
         loading: false,
       };

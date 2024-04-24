@@ -1,16 +1,14 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { setDoctorList } from '../actions/userActions';
+import { doctorListActions } from '../actions';
 
-function* getDoctorList({ payload }) {
+function* getDoctorList(action) {
   try {
-    const { data } = yield call(axios.get, `https://api.allodoc.md/users/get-doctors/?page=1&category=${payload}`);
-    yield put(setDoctorList(data.results));
+    const category = action.payload;
+    const { data } = yield call(axios.get, `https://api.allodoc.md/users/get-doctors/?page=1&category=${category}`);
+    yield put(doctorListActions.success(data.results));
   } catch (error) {
-    console.log(error);
+    put(doctorListActions.error(error));
   }
 }
-
-export default function* doctorListSaga() {
-  yield takeLatest(setDoctorList, getDoctorList);
-}
+export default getDoctorList;

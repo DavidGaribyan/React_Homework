@@ -4,30 +4,18 @@ import './doctorProfile.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { doctorInfo } from '../../store/actions/userActions';
-import { doctorInfoPageSelector } from '../../store/selectors';
-
+import { doctorInfoPageSelector } from '../../store/selectors/doctorInfoPageSelector';
+import { doctorInfoPageActions } from '../../store/actions';
 export default function DoctorProfile() {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const doctorInfoPageUser = useSelector(doctorInfoPageSelector);
 
+  const { loading, data } = useSelector(doctorInfoPageSelector);
   useEffect(() => {
-    dispatch(doctorInfo({ id: id }));
+    dispatch(doctorInfoPageActions.get(id));
   }, [dispatch, id]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://api.allodoc.md/users/user/${id}/?role=doctor`)
-  //     .then((resp) => {
-  //       dispatch(doctorInfoPage(resp.data.results));
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, [id, dispatch]);
-
-  if (!doctorInfoPageUser) {
+  if (loading) {
     return (
       <>
         <p>Loading...</p>
@@ -36,8 +24,8 @@ export default function DoctorProfile() {
   } else {
     return (
       <>
-        <DoctorProfileBanner initial={doctorInfoPageUser} />
-        <DoctorProfileInfo initial={doctorInfoPageUser} />
+        <DoctorProfileBanner initial={data} />
+        <DoctorProfileInfo initial={data} />
       </>
     );
   }

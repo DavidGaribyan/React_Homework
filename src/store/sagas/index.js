@@ -1,7 +1,11 @@
-import doctorPageSaga from './doctorPageSaga';
 import doctorListSaga from './doctorListSaga';
-import { all } from 'redux-saga/effects';
+import doctorInfoPageSaga from './doctorInfoPageSaga';
+import { takeLatest } from 'redux-saga/effects';
+import { doctorListTypes, doctorInfoPageTypes } from '../types';
 
-export default function* rootSaga() {
-  yield all([doctorListSaga(), doctorPageSaga()]);
+function* rootSaga() {
+  yield takeLatest(doctorListTypes.REQUEST, doctorListSaga);
+  yield takeLatest(doctorInfoPageTypes.REQUEST, doctorInfoPageSaga);
 }
+
+export default rootSaga;

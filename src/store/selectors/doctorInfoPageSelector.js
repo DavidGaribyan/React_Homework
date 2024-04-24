@@ -1,1 +1,2 @@
-export const doctorInfoPageSelector = (state) => state.doctorInfoPage;
+const doctorInfoPageSelector = (state) => state.doctorInfoPage;
+export { doctorInfoPageSelector };

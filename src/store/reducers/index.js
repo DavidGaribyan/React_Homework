@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import doctorInfoPage from './userReducer';
 import doctorInfoPageReducer from './doctorInfoPageReducer';
+import doctorListReducer from './doctorListReducer';
 
 const redusers = combineReducers({
-  doctorList: doctorInfoPage,
+  doctorList: doctorListReducer,
   doctorInfoPage: doctorInfoPageReducer,
 });
 

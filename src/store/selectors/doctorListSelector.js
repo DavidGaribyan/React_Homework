@@ -1,1 +1,2 @@
-export const doctorListSelector = (state) => state.doctorList;
+const doctorListSelector = (state) => state.doctorList;
+export { doctorListSelector };
